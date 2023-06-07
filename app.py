@@ -29,7 +29,11 @@ class Post(db.Model):
     content = db.Column(db.Text)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
-
+@app.route('/', methods=['GET'])
+def login():
+    return jsonify({'Status': "OK"}), 200
+    
+    
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
