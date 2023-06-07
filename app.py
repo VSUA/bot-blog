@@ -30,7 +30,7 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
 @app.route('/', methods=['GET'])
-def login():
+def status():
     return jsonify({'Status': "OK"}), 200
     
     
