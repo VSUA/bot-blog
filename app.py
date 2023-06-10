@@ -31,7 +31,7 @@ class Post(db.Model):
 
 @app.route('/', methods=['GET'])
 def status():
-    return jsonify({'Status': "OK"}), 200
+    return jsonify({'Status': "OKOKOK"}), 200
     
     
 @app.route('/register', methods=['POST'])
